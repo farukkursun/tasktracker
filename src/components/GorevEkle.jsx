@@ -9,38 +9,43 @@ const GorevEkle = ({ veri, setVeri }) => {
   const formGönder = (e) => {
     e.preventDefault();
 
-    const id = veri.length + 1;
-    setVeri([{ id, text: gorev, day: tarih, bittiMi: false }, ...veri]);
+    setVeri([
+      { id: veri.length + 1, text: gorev, day: tarih, bittiMi: false },
+      ...veri,
+    ]);
+    setGorev("");
+    setTarih("");
   };
   console.log(veri);
   return (
     <div>
-      <form className="" onSubmit={formGönder}>
-        <div className="">
-          <label htmlFor="task" className="form-label">
-            Task
-          </label>
+      <form onSubmit={formGönder}>
+        <div className="form-control">
+          <label htmlFor="text">Task</label>
           <input
             type="text"
-            className="form-control"
-            id="task"
+            name="text"
+            id="textk"
+            value={gorev}
             onInput={(e) => setGorev(e.target.value)}
             placeholder="Add Task"
           />
-          <label htmlFor="time" className="form-label">
-            Day & Time
-          </label>
+        </div>
+        <div className="form-control">
+          <label htmlFor="time">Day & Time</label>
           <input
             type="date"
-            className="form-control"
+            name="time"
             id="time"
+            value={tarih}
             onChange={(e) => setTarih(e.target.value)}
-            
           />
         </div>
-        <button type="submit" className="btn-submit">
-          Save Task
-        </button>
+        <div>
+          <button type="submit" className="btn btn-submit">
+            Save Task
+          </button>
+        </div>
       </form>
     </div>
   );
