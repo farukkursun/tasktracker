@@ -16,7 +16,7 @@ Responsive Movie App made using React and Bootstrap.
 ### Installation Options
 
 ```
-$ git clone https://github.com/farukkursun/movie-app
+$ git clone https://github.com/farukkursun/tasktracker
 ```
 
 ```
@@ -30,7 +30,7 @@ $ npm start
 ### Or
 
 ```
-$ git clone https://github.com/farukkursun/movie-app
+$ git clone https://github.com/farukkursun/tasktracker
 ```
 
 ```
@@ -45,6 +45,6 @@ $ yarn start
 
 ### Demo
 
-#### [View Demo](https://farukmovieapp.netlify.app/)
+#### [View Demo](https://tasktarckerfaruk.netlify.app/)
 
-![Demo](/src/assets/movieapp.gif)
+![Demo](/src/assets/tasktracker.gif)

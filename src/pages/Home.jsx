@@ -5,16 +5,16 @@ import data from "../helper/Data";
 const Home = () => {
   const [veri, setVeri] = useState(data);
   const [buton, setButon] = useState({
-    renk: "red",
+    renk: "burlywood",
     yazi: "CLOSE ADD TASK BAR",
   });
 
   const butonClick = () => {
-    if (buton.renk === "red") {
-      setButon({ renk: "purple", yazi: "show add task bar" });
+    if (buton.renk === "burlywood") {
+      setButon({ renk: "brown", yazi: "show add task bar" });
     } else {
       setButon({
-        renk: "red",
+        renk: "burlywood",
         yazi: "CLOSE ADD TASK BAR",
       });
     }
@@ -33,7 +33,7 @@ const Home = () => {
         </button>
       </header>
 
-      {buton.renk === "red" && 
+      {buton.renk === "burlywood" && 
       
       (
       <GorevEkle veri={veri} setVeri={setVeri} />)}

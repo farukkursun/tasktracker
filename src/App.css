@@ -9,16 +9,16 @@
 body {
   height: 100vh;
   font-family: "Poppins", sans-serif;
-  background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+  background-image: linear-gradient(to top, #46ac85 0%, #6fe6f3 100%);
   background-repeat: no-repeat;
   background-size: cover;
   
 }
 .container {
   background-image: linear-gradient(
-    to bottom right,
-    rgb(204, 16, 119),
-    rgb(231, 191, 213)
+    to bottom,
+    rgb(16, 135, 204),
+    rgb(51, 129, 134)
   );
   margin: 3rem auto;
   max-width: 600px;
@@ -31,6 +31,8 @@ body {
 .header {
   text-align: center;
   margin: 1rem;
+ 
+  
 }
 
 .btn {
@@ -38,10 +40,11 @@ body {
   cursor: pointer;
   text-transform: uppercase;
   outline: none;
-  color: #fff;
+  color:  white;
   font-weight: 700;
   font-size: 15px;
-  padding: 1rem;
+  margin-top: 0.5rem;
+  padding: 0.7rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
@@ -65,9 +68,9 @@ body {
 .btn-submit {
   display: block;
   width: 100%;
-  padding: 0.3rem;
+  padding: 0.6rem;
   color: white;
-  background-color: purple;
+  background-color: rgb(7, 117, 44);
   margin: 1rem 0;
 }
 /*! data daki bittiMi kısmı false iken görünecek stil */
@@ -81,7 +84,7 @@ body {
 }
 /*! data daki bittiMi kısmı true iken görünecek stil */
 .trueStil {
-  border-left: 10px solid rgb(102, 18, 77);
+  border-left: 10px solid rgb(7, 117, 44);
   text-decoration: line-through;
   background-color: darkgrey;
   padding: 10px 20px;
