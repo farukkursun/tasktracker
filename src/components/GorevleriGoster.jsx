@@ -1,16 +1,17 @@
 import React from "react";
-import { FaCrosshairs } from "react-icons/fa";
+import { FaTimesCircle } from "react-icons/fa";
 
 const GorevleriGoster = ({ veri, setVeri }) => {
   // console.log(veri);
   const veriSil = (id) => {
     setVeri(veri.filter((element) => element.id !== id));
   };
-  // console.log(veri);
+
   return (
     <div>
       {veri.length !== 0 ? (
         veri.map((a) => {
+          
           return (
             <div
               onDoubleClick={() =>
@@ -26,7 +27,7 @@ const GorevleriGoster = ({ veri, setVeri }) => {
               <h3>
                 {a.text}
                 <i className="cross">
-                  <FaCrosshairs onClick={() => veriSil(a.id)} />
+                  <FaTimesCircle onClick={() => veriSil(a.id)} />
                 </i>
               </h3>
               <p>{a.day}</p>

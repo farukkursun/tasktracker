@@ -1,21 +1,23 @@
+import moment from "moment";
 import React, { useState } from "react";
-
-// import data from "../helper/Data";
 
 const GorevEkle = ({ veri, setVeri }) => {
   const [gorev, setGorev] = useState("");
   const [tarih, setTarih] = useState("");
-  // const [veri, setVeri] = useState(data);
+  const ytarih = moment(tarih).format('MMM Do, h:mm a')
   const formGönder = (e) => {
     e.preventDefault();
-
-    setVeri([
-      { id: veri.length + 1, text: gorev, day: tarih, bittiMi: false },
+    if(gorev && tarih){setVeri([
+      { id: veri.length + 1, text: gorev, day: ytarih, bittiMi: false },
       ...veri,
-    ]);
+    ])}else{
+      alert('görev ve tarih girmen gerekiyor')
+    }
+    
     setGorev("");
     setTarih("");
   };
+
   console.log(veri);
   return (
     <div>
@@ -43,7 +45,7 @@ const GorevEkle = ({ veri, setVeri }) => {
         </div>
         <div>
           <button type="submit" className="btn btn-submit">
-            Save Task
+            Submit
           </button>
         </div>
       </form>
